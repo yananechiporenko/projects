@@ -1,8 +1,23 @@
 package ua.com.goit.task3.FileFlowerTool.file;
 
-/**
- * Created by 222 on 20.12.2015.
- */
+
 public class File {
-    public static void main(String [] args){}
+    private double size;
+    private String format;
+
+        public String getFormat() {
+            return format;
+        }
+
+        public double getSize() {
+            return size;
+        }
+
+        public File(String format, double size) {
+            this.format = format;
+            this.size = size;
+        }
+    public boolean run (){
+        return true;
+    }
 }

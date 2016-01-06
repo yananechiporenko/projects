@@ -1,11 +1,25 @@
 package ua.com.goit.task3.FileFlowerTool.tool;
 
-/**
- * Created by y.nechiporenko on 25.12.2015.
- */
 public class Store {
-    Trumpet trumpet1 = new Trumpet();
-    Guitar guitar1 = new Guitar();
-    Piano piano1 = new Piano();
+    private String address;
+    public boolean open1(){
+        return true;
+    }
+    public boolean close(){
+        return false;
+    }
+
+    public Store(String address) {
+        this.address = address;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    Store store1 = new Store("Kiev, 48 Artem st.");
+    Trumpet trumpet1 = new Trumpet("linear");
+    Guitar guitar1 = new Guitar("roundish");
+    Piano piano1 = new Piano("square");
 
 }
