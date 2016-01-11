@@ -13,11 +13,7 @@ public class Directory {
             return size;
         }
 
-    public void setSize(double size) {
-        this.size = size;
-    }
-
-    public boolean open (){
+   public boolean open (){
         return true;
     }
 
@@ -25,8 +21,5 @@ public class Directory {
     AudioFile audio1 = new AudioFile("mp3", 2.3);
     ImageFile image1 = new ImageFile("jpg", 1.0);
     TextFile text1 = new TextFile("txt", 1.0);
-    directory1.setSize(){
-        size = audio1.getSize()+image1.getSize()+text1.getSize();
-        System.out.print(directory1.getSize());
-    }
+
 }
