@@ -2,11 +2,20 @@ package ua.com.goit.task3.FileFlowerTool.tool;
 
 public class Store {
     private String address;
-    public boolean open1(){
+    private Object[] tools;
+    boolean open1(){
         return true;
     }
-    public boolean close(){
+    boolean close(){
         return false;
+    }
+
+    public Object[] getTools() {
+        return tools;
+    }
+
+    public void setTools(Object[] tools) {
+        this.tools = tools;
     }
 
     public Store(String address) {
@@ -17,9 +26,12 @@ public class Store {
         return address;
     }
 
-    Store store1 = new Store("Kiev, 48 Artem st.");
-    Trumpet trumpet1 = new Trumpet("linear");
-    Guitar guitar1 = new Guitar("roundish");
-    Piano piano1 = new Piano("square");
+    public Object[] stringTools () {
+        for (int i = 0; i < tools.length; i++){
+            tools[i]= tools[i].getClass().getSimpleName();
+        }
+        return tools;
+    }
+
 
 }

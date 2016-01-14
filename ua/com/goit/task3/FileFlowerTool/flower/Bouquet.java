@@ -4,29 +4,21 @@ package ua.com.goit.task3.FileFlowerTool.flower;
  * Created by y.nechiporenko on 25.12.2015.
  */
 public class Bouquet {
-    private int countOfFlower;
+    private Object [] flowers;
 
-    public Bouquet(int countOfFlower) {
-        this.countOfFlower = countOfFlower;
+    public Object[] getFlowers() {
+        return flowers;
     }
 
-    public int getCountOfFlower() {
-        return countOfFlower;
+    public Bouquet(Object[] flowers) {
+        this.flowers = flowers;
     }
 
-    public void setCountOfFlower(int countOfFlower) {
-        this.countOfFlower = countOfFlower;
+    public Object[] stringBouquet () {
+        for (int i = 0; i < flowers.length; i++){
+            flowers[i]= flowers[i].getClass().getSimpleName();
+        }
+        return flowers;
     }
-
-    public boolean smell (){
-        return true;
-    }
-
-    Bouquet firstBouqet = new Bouquet(4) {};
-
-        Aster aster1 = new Aster("red");
-        Chamomile chamomile1 = new Chamomile("white");
-        Rose rose1 = new Rose("pink");
-        Tulip tulip1 = new Tulip("yellow");
 
 }
