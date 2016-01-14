@@ -5,5 +5,10 @@ public class ArrayRunner {
 
       Array myArray = new Array(new int[]{3, 4, 6, 2, 1, 8});
 
+        myArray.biggerElement();
+        myArray.smallerElement();
+        myArray.rangeDecrease();
+        myArray.rangeIncrease();
+
     }
 }
