@@ -11,26 +11,111 @@ public class MatrixCalculator {
         this.secondMatrix = secondMatrix;
     }
 
-    public double [][] matrixCalculator (){
+    public double [][] matrixMultiplied(){
         if ((firstMatrix.getMatrixElemens().length == secondMatrix.getMatrixElemens().length) &
                 (firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length) ==
         secondMatrix.getMatrixElemens()[secondMatrix.getMatrixElemens().length - 1].length){
 
-            System.out.println("Please enter a name for new multiplied matrix");
-            Scanner scanner = new Scanner(System.in);
-            final String multipliedMatrixName = scanner.next();
-            Matrix d = new Matrix(new double [firstMatrix.getMatrixElemens().length]
+            Matrix multiplied = new Matrix(new double [firstMatrix.getMatrixElemens().length]
                     [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
         for (int i = 0; i < firstMatrix.getMatrixElemens().length; i++  ){
             for (int j = 0; j < firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length; j++ ){
-               d.getMatrixElemens() [i][j] = firstMatrix.getMatrixElemens() [i][j] * secondMatrix.getMatrixElemens() [i][j];
+               multiplied.getMatrixElemens() [i][j] = firstMatrix.getMatrixElemens() [i][j] * secondMatrix.getMatrixElemens() [i][j];
             }
 
-        }
-            System.out.println(d.getMatrixElemens());
-            return d.getMatrixElemens();
+        }   System.out.println("Your new multiplied matrix contains:");
+            for (int i = 0; i < multiplied.getMatrixElemens().length; i++){
+                for (int j = 0; j < multiplied.getMatrixElemens()[0].length; j++){
+                    System.out.print(multiplied.getMatrixElemens()[i][j] + " ");
+                }
+                System.out.println();
+            }
+            return multiplied.getMatrixElemens();
     }else {
         System.out.println("Your matrix should have the same size");}
+        Matrix falseMatrix = new Matrix(new double [firstMatrix.getMatrixElemens().length]
+                [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
+        return falseMatrix.getMatrixElemens();
+
+    }
+
+    public double [][] matrixDivided(){
+        if ((firstMatrix.getMatrixElemens().length == secondMatrix.getMatrixElemens().length) &
+                (firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length) ==
+                        secondMatrix.getMatrixElemens()[secondMatrix.getMatrixElemens().length - 1].length){
+
+            Matrix multiplied = new Matrix(new double [firstMatrix.getMatrixElemens().length]
+                    [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
+            for (int i = 0; i < firstMatrix.getMatrixElemens().length; i++  ){
+                for (int j = 0; j < firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length; j++ ){
+                    multiplied.getMatrixElemens() [i][j] = firstMatrix.getMatrixElemens() [i][j] / secondMatrix.getMatrixElemens() [i][j];
+                }
+
+            }   System.out.println("Your new divided matrix contains:");
+            for (int i = 0; i < multiplied.getMatrixElemens().length; i++){
+                for (int j = 0; j < multiplied.getMatrixElemens()[0].length; j++){
+                    System.out.print(multiplied.getMatrixElemens()[i][j] + " ");
+                }
+                System.out.println();
+            }
+            return multiplied.getMatrixElemens();
+        }else {
+            System.out.println("Your matrix should have the same size");}
+        Matrix falseMatrix = new Matrix(new double [firstMatrix.getMatrixElemens().length]
+                [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
+        return falseMatrix.getMatrixElemens();
+
+    }
+
+    public double [][] matrixAdded(){
+        if ((firstMatrix.getMatrixElemens().length == secondMatrix.getMatrixElemens().length) &
+                (firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length) ==
+                        secondMatrix.getMatrixElemens()[secondMatrix.getMatrixElemens().length - 1].length){
+
+            Matrix multiplied = new Matrix(new double [firstMatrix.getMatrixElemens().length]
+                    [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
+            for (int i = 0; i < firstMatrix.getMatrixElemens().length; i++  ){
+                for (int j = 0; j < firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length; j++ ){
+                    multiplied.getMatrixElemens() [i][j] = firstMatrix.getMatrixElemens() [i][j] + secondMatrix.getMatrixElemens() [i][j];
+                }
+
+            }   System.out.println("Your new added matrix contains:");
+            for (int i = 0; i < multiplied.getMatrixElemens().length; i++){
+                for (int j = 0; j < multiplied.getMatrixElemens()[0].length; j++){
+                    System.out.print(multiplied.getMatrixElemens()[i][j] + " ");
+                }
+                System.out.println();
+            }
+            return multiplied.getMatrixElemens();
+        }else {
+            System.out.println("Your matrix should have the same size");}
+        Matrix falseMatrix = new Matrix(new double [firstMatrix.getMatrixElemens().length]
+                [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
+        return falseMatrix.getMatrixElemens();
+
+    }
+    public double [][] matrixSubtracted(){
+        if ((firstMatrix.getMatrixElemens().length == secondMatrix.getMatrixElemens().length) &
+                (firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length) ==
+                        secondMatrix.getMatrixElemens()[secondMatrix.getMatrixElemens().length - 1].length){
+
+            Matrix multiplied = new Matrix(new double [firstMatrix.getMatrixElemens().length]
+                    [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
+            for (int i = 0; i < firstMatrix.getMatrixElemens().length; i++  ){
+                for (int j = 0; j < firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length; j++ ){
+                    multiplied.getMatrixElemens() [i][j] = firstMatrix.getMatrixElemens() [i][j] - secondMatrix.getMatrixElemens() [i][j];
+                }
+
+            }   System.out.println("Your new subtract matrix contains:");
+            for (int i = 0; i < multiplied.getMatrixElemens().length; i++){
+                for (int j = 0; j < multiplied.getMatrixElemens()[0].length; j++){
+                    System.out.print(multiplied.getMatrixElemens()[i][j] + " ");
+                }
+                System.out.println();
+            }
+            return multiplied.getMatrixElemens();
+        }else {
+            System.out.println("Your matrix should have the same size");}
         Matrix falseMatrix = new Matrix(new double [firstMatrix.getMatrixElemens().length]
                 [firstMatrix.getMatrixElemens()[firstMatrix.getMatrixElemens().length - 1].length]);
         return falseMatrix.getMatrixElemens();
