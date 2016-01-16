@@ -1,8 +1,5 @@
 package ua.com.goit.task4.TemperatureAreaDistance.temperature;
 
-/**
- * Created by y.nechiporenko on 21.12.2015.
- */
 public class Temperature {
     public double grad;
 
