@@ -1,6 +1,5 @@
 package ua.com.goit.task3.FileFlowerTool.file;
 
-
 public class File {
     private double size;
     private String format;
@@ -17,8 +16,7 @@ public class File {
             this.format = format;
             this.size = size;
         }
-    public boolean run (){
-        return true;
-    }
+
+
 
 }

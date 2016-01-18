@@ -5,4 +5,5 @@ public class AudioFile extends File {
     public AudioFile(String format, double size) {
         super(format, size);
     }
+
 }
