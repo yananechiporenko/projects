@@ -1,10 +1,21 @@
 package ua.com.goit.task3.FileFlowerTool.file;
 
-public class File {
+public class File implements Comparable {
     private double size;
     private String format;
 
-        public String getFormat() {
+    @Override
+    public int compareTo(Object o) {
+        File next = (File)o;
+        if (this.size < next.size){
+            return -1;
+        } else if (this.size > next.size){
+            return 1;
+        }
+        return 0;
+    }
+
+    public String getFormat() {
             return format;
         }
 
@@ -17,6 +28,11 @@ public class File {
             this.size = size;
         }
 
-
-
+    @Override
+    public String toString() {
+        return this.getClass().getSimpleName() +" {" +
+                "size=" + size +
+                ", format='" + format + '\'' +
+                '}';
+    }
 }
