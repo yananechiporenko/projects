@@ -3,10 +3,11 @@ package ua.com.goit.task3.FileFlowerTool.file;
 
 public class FileRunner {
     public static void main(String[] args) {
-        Directory directory1 = new Directory();
-        directory1.createAudio();
-        directory1.createImage();
-        directory1.createText();
+        AudioFile audio1 = new AudioFile("mp3",2.3);
+        ImageFile image1 = new ImageFile("jpg",1.0);
+        TextFile text1 = new TextFile("txt",1.0);
+
+        Directory directory1 = new Directory(audio1, image1, text1);
         directory1.directorySize();
         try {
             AudioFile audio2 = new AudioFile("mp3", 1001.0);

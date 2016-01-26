@@ -1,33 +1,18 @@
 package ua.com.goit.task3.FileFlowerTool.file;
 
 public class Directory {
-    AudioFile audio1;
-    ImageFile image1;
-    TextFile text1;
+    AudioFile audio;
+    ImageFile image;
+    TextFile text;
 
-    public AudioFile createAudio() {
-        String fileFormat = "mp3";
-        double fileSize = 2.3;
-        audio1 = new AudioFile(fileFormat, fileSize);
-        return audio1;
-    }
-
-    public ImageFile createImage() {
-        String fileFormat = "jpg";
-        double fileSize = 1.0;
-        image1 = new ImageFile(fileFormat, fileSize);
-        return image1;
-    }
-
-    public TextFile createText() {
-        String fileFormat = "txt";
-        double fileSize = 1.0;
-        text1 = new TextFile(fileFormat, fileSize);
-        return text1;
+    public Directory(AudioFile audio, ImageFile image, TextFile text) {
+        this.audio = audio;
+        this.image = image;
+        this.text = text;
     }
 
     public double directorySize (){
-        double size = audio1.getSize() + image1.getSize() + text1.getSize();
+        double size = this.audio.getSize() + this.image.getSize() + this.text.getSize();
         System.out.println("Size of this directory is " + size);
         return size;
     }
