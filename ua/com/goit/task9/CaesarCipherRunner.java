@@ -12,7 +12,6 @@ public class CaesarCipherRunner {
         CaesarCipher myCaesarCipher = new CaesarCipher();
         String cipherText = myCaesarCipher.caesarCipher(myArrayForCipher,changeStepForCipher);
         System.out.println(cipherText);
-        String textForDecipher = myCaesarCipher.caesarCipher(myArrayForCipher,changeStepForCipher);
 
         String writeText = "Caesar cipher.txt";
         char [] myArrayForDecipher1 = new char[myArrayForCipher.length];
@@ -22,22 +21,22 @@ public class CaesarCipherRunner {
             writer.write(cipherText);
         }
 
-        try (DataInputStream reader = new DataInputStream(new BufferedInputStream(new FileInputStream(writeText)))){
+        try (DataInputStream stream = new DataInputStream(new BufferedInputStream(new FileInputStream(writeText)))){
+            InputStreamReader reader = new InputStreamReader(stream,"UTF-8");
+
+            int data = reader.read();
             for (int i = 0; i < myArrayForCipher.length; i++){
-                myArrayForDecipher1[i] = reader.readChar();
-                System.out.print(myArrayForDecipher1[i]);
+                myArrayForDecipher1[i] = (char) data;
+                data = reader.read();
             }
         }
          catch (EOFException e){
             System.out.println("Reached end of file.");
         }
 
-
         Decipher myDecipher = new Decipher();
-        final char [] myArrayForDecipher = textForDecipher.toCharArray();
-        myDecipher.caesarDecipher(myArrayForDecipher,changeStepForCipher);
-        String decipherText = myDecipher.caesarDecipher(myArrayForDecipher,changeStepForCipher);
-        System.out.println(decipherText);
+        System.out.println(myDecipher.caesarDecipher(myArrayForDecipher1,changeStepForCipher));
+
     }
 
 }
