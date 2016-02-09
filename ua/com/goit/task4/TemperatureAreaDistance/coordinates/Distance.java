@@ -4,10 +4,14 @@ public class Distance {
     Point point1;
     Point point2;
 
+    public Distance(Point point1, Point point2) {
+        this.point1 = point1;
+        this.point2 = point2;
+    }
 
-    public double dictanceCalculator (Point point1,Point point2){
-        double xDifference = point1.getX()-point2.getX();
-        double yDifference = point1.getY()-point2.getY();
+    public double dictanceCalculator (){
+        double xDifference = this.point1.getX()-this.point2.getX();
+        double yDifference = this.point1.getY()-this.point2.getY();
         double a2 = xDifference*xDifference;
         double b2 = yDifference*yDifference;
         double c2 = a2+b2;

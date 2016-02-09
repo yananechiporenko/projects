@@ -4,7 +4,7 @@ public class Triangle extends GeometricFigure {
     private double side;
     private double high;
 
-        Triangle (double side, double high){
+        public Triangle (double side, double high){
         this.side = side;
         this.high = high;
 

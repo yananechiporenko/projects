@@ -2,7 +2,7 @@ package ua.com.goit.task9;
 
 
 public class Decipher extends Cipher{
-    String caesarDecipher(char[] arrayForDecipher, int changeStep) {
+    public String caesarDecipher(char[] arrayForDecipher, int changeStep) {
 
         for (int i=0; i<arrayForDecipher.length; i++ ){
             if (arrayForDecipher[i]!=',' && arrayForDecipher[i]!= ' ') {

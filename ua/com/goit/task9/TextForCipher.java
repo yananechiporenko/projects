@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 
 
 public class TextForCipher {
-    String textForCipherCreate (){
+    public String textForCipherCreate (){
         ObjectListCreate fileList = new ObjectListCreate();
 
         String textOfCollectionsEllements = fileList.fileListCreate()

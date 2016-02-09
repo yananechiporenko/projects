@@ -3,7 +3,7 @@ package ua.com.goit.task4.TemperatureAreaDistance.geometricShapesArea;
 public class ShapeRunner {
 
     public static void main (String[] args){
-        Circle circle1 = new Circle(2.4);
+        Circle circle1 = new Circle(1.1);
         Triangle triangle1 = new Triangle(3.2, 2.5);
         Rectangle rectangle1 = new Rectangle(1.9, 3.1);
 

@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class CaesarCipher extends Cipher {
 
-    String caesarCipher(char[] arrayForCipher, int changeStep) {
+    public String caesarCipher(char[] arrayForCipher, int changeStep) {
 
         for (int i=0; i<arrayForCipher.length; i++ ){
             if (arrayForCipher[i]!=',' && arrayForCipher[i]!= ' ') {

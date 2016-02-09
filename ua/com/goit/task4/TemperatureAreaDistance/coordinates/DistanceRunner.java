@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class DistanceRunner {
     public static void main (String [] args){
-        Distance distance1 = new Distance();
+
 
         System.out.println("Please, enter 'x' for point1");
         final Scanner scannerX1 = new Scanner(System.in);
@@ -20,8 +20,9 @@ public class DistanceRunner {
         final Scanner scannerY2 = new Scanner(System.in);
         final double y2 = scannerY2.nextDouble();
         Point point2 = new Point(x2, y2);
+        Distance distance1 = new Distance(point1, point2);
 
-        distance1.dictanceCalculator(point1,point2);
+        distance1.dictanceCalculator();
 
     }
 }
